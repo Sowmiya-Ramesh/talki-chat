@@ -2,14 +2,25 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
 import './Join.css';
+import logo from '../../images/logo.png';
 
 export default function SignIn() {
   const [name, setName] = useState('');
   const [room, setRoom] = useState('');
 
   return (
-    <div className="joinOuterContainer">
+    <div className="join-container">
+    <header class="join-header">
+  <div>  <img className="logo" alt="logo" src={ logo } />
+    </div>
+				{/* <h1><i class="uil uil-grin-tongue-wink"></i> Talki</h1>
+        <h4><i>stay connected !</i></h4> */}
+			</header>
+     
+       <div className="joinOuterContainer">
+     
       <div className="joinInnerContainer">
+     
         <h1 className="heading">Join</h1>
         <div>
           <input placeholder="Name" className="joinInput" type="text" onChange={(event) => setName(event.target.value)} />
@@ -22,5 +33,9 @@ export default function SignIn() {
         </Link>
       </div>
     </div>
+   </div>
+   
   );
 }
+
+
